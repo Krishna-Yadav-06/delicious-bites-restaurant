@@ -1,6 +1,11 @@
 const express = require('express');
 const cors = require('cors');
-const nodemailer = require('nodemailer');
+let nodemailer;
+try {
+    nodemailer = require('nodemailer');
+} catch (e) {
+    console.log('Nodemailer not available, email features disabled');
+}
 require('dotenv').config();
 
 const app = express();
@@ -10,13 +15,16 @@ app.use(cors());
 app.use(express.json());
 
 // Email Configuration (Gmail)
-const transporter = nodemailer.createTransporter({
-    service: 'gmail',
-    auth: {
-        user: process.env.EMAIL_USER, // Your Gmail
-        pass: process.env.EMAIL_PASS  // Your Gmail App Password
-    }
-});
+let transporter;
+if (nodemailer) {
+    transporter = nodemailer.createTransporter({
+        service: 'gmail',
+        auth: {
+            user: process.env.EMAIL_USER, // Your Gmail
+            pass: process.env.EMAIL_PASS  // Your Gmail App Password
+        }
+    });
+}
 
 // In-memory database (replace with MongoDB in production)
 const users = [];
@@ -24,6 +32,11 @@ const reservations = [];
 
 // Email Templates
 const sendWelcomeEmail = async (email, name) => {
+    if (!transporter) {
+        console.log('Email disabled - would have sent welcome email to:', email);
+        return;
+    }
+    
     const mailOptions = {
         from: process.env.EMAIL_USER,
         to: email,
@@ -54,6 +67,11 @@ const sendWelcomeEmail = async (email, name) => {
 };
 
 const sendReservationEmail = async (email, name, reservation) => {
+    if (!transporter) {
+        console.log('Email disabled - would have sent reservation email to:', email);
+        return;
+    }
+    
     const mailOptions = {
         from: process.env.EMAIL_USER,
         to: email,
