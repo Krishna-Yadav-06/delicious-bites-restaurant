@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bites - Premium Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Delicious<span>Bites</span></div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#events" class="nav-link">Events</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link"><i class="fas fa-user"></i> Login</a></li>
+                <li><a href="#reservation" class="btn-primary">Book Table</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">Premium Dining Experience</span>
+            <h1 class="hero-title">Savor the Art of <span>Fine Dining</span></h1>
+            <p class="hero-subtitle">Experience curated menus, crafted cocktails, and an ambiance that inspires</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn-primary">Explore Menu</a>
+                <a href="#reservation" class="btn-secondary">Book a Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Chef-crafted Menus</h3>
+                    <p>Seasonal ingredients, bold flavors, and exquisite presentation</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-wine-glass"></i>
+                    <h3>Elegant Ambiance</h3>
+                    <p>An immersive dining atmosphere for every occasion</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Events & Tastings</h3>
+                    <p>Live music nights and curated tasting menus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Menu</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Crafted with seasonal produce and culinary artistry</p>
+            
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="starters">Starters</button>
+                <button class="tab-btn" data-tab="mains">Main Course</button>
+                <button class="tab-btn" data-tab="desserts">Desserts</button>
+                <button class="tab-btn" data-tab="drinks">Drinks</button>
+            </div>
+
+            <div class="menu-content active" id="starters">
+                <div class="menu-grid" id="startersGrid"></div>
+            </div>
+            <div class="menu-content" id="mains">
+                <div class="menu-grid" id="mainsGrid"></div>
+            </div>
+            <div class="menu-content" id="desserts">
+                <div class="menu-grid" id="dessertsGrid"></div>
+            </div>
+            <div class="menu-content" id="drinks">
+                <div class="menu-grid" id="drinksGrid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800" alt="Restaurant Interior">
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">About Delicious Bites</h2>
+                    <p>Welcome to Delicious Bites, where culinary excellence meets elegant ambiance. Since 2015, we've been serving the finest dishes crafted from locally sourced, seasonal ingredients.</p>
+                    <p>Our award-winning chefs bring years of international experience, creating innovative dishes that honor traditional techniques while embracing modern flavors.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Menu Items</p>
+                        </div>
+                        <div class="stat">
+                            <h3>1000+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events-section">
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <p class="section-subtitle">Join our curated evenings of music, wine, and chef's specials</p>
+            <div class="events-grid" id="eventsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation-section">
+        <div class="container">
+            <h2 class="section-title">Reserve a Table</h2>
+            <p class="section-subtitle">Book your dining experience with us</p>
+            <form class="reservation-form" id="reservationForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Guests</label>
+                        <input type="number" name="guests" min="1" max="20" value="2" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Time</label>
+                        <input type="time" name="time" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Reserve Now</button>
+            </form>
+            <div id="formMessage" class="form-message"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>MG Road, Opposite Central Mall<br>Hubli, Karnataka 580029, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 836 234 5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@deliciousbites.in</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon-Fri: 11:00 AM - 11:00 PM<br>Sat-Sun: 10:00 AM - 12:00 AM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps?q=Hubli,Karnataka,India&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Delicious<span>Bites</span></h3>
+                    <p>Elevating culinary experiences with modern flair and timeless flavors</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Delicious Bites. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
