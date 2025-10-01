@@ -1,11 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-let nodemailer;
-try {
-    nodemailer = require('nodemailer');
-} catch (e) {
-    console.log('Nodemailer not available, email features disabled');
-}
 require('dotenv').config();
 
 const app = express();
@@ -14,16 +8,20 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Email Configuration (Gmail)
-let transporter;
-if (nodemailer) {
+// Email Configuration (Gmail) - Optional
+let transporter = null;
+try {
+    const nodemailer = require('nodemailer');
     transporter = nodemailer.createTransporter({
         service: 'gmail',
         auth: {
-            user: process.env.EMAIL_USER, // Your Gmail
-            pass: process.env.EMAIL_PASS  // Your Gmail App Password
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
         }
     });
+    console.log('✅ Email service enabled');
+} catch (error) {
+    console.log('⚠️ Email service disabled (nodemailer not available)');
 }
 
 // In-memory database (replace with MongoDB in production)
