@@ -18,8 +18,8 @@ const menuData = {
     ],
     desserts: [
         { name: 'Chocolate Cake', price: 180, image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&auto=format', description: 'Rich, moist chocolate cake with chocolate ganache frosting' },
-        { name: 'Red Velvet Cake', price: 200, image: 'https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=400&auto=format', description: 'Classic red velvet with cream cheese frosting' },
-        { name: 'Vanilla Cake', price: 170, image: 'https://images.unsplash.com/photo-1588195538326-c5b1e5b80d47?w=400&auto=format', description: 'Classic vanilla sponge cake with buttercream frosting' },
+        { name: 'Red Velvet Cake', price: 200, image: 'https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=400&auto=format', description: 'Classic red velvet with cream cheese frosting' },
+        { name: 'Vanilla Cake', price: 170, image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&auto=format', description: 'Classic vanilla sponge cake with buttercream frosting' },
         { name: 'Black Forest Cake', price: 190, image: 'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=400&auto=format', description: 'Chocolate sponge with cherries and whipped cream' },
         { name: 'Strawberry Cake', price: 180, image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&auto=format', description: 'Light vanilla cake with fresh strawberries and cream' },
         { name: 'Tiramisu', price: 210, image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&auto=format', description: 'Classic Italian coffee-flavored dessert with mascarpone' }
