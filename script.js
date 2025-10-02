@@ -17,10 +17,10 @@ const menuData = {
         { name: 'Chole Bhature', price: 250, image: 'https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=400&auto=format', description: 'Spicy chickpea curry with fluffy deep-fried bread' }
     ],
     desserts: [
-        { name: 'Gulab Jamun', price: 120, image: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400&auto=format', description: 'Soft milk dumplings soaked in rose-flavored sugar syrup' },
-        { name: 'Rasmalai', price: 150, image: 'https://images.unsplash.com/photo-1558326567-98ae2405596b?w=400&auto=format', description: 'Cottage cheese patties in sweetened, thickened milk with saffron' },
-        { name: 'Kulfi Falooda', price: 140, image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&auto=format', description: 'Traditional Indian ice cream with vermicelli and rose syrup' },
-        { name: 'Gajar Halwa', price: 130, image: 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&auto=format', description: 'Warm carrot pudding with ghee, milk, and dry fruits' }
+        { name: 'Gulab Jamun', price: 120, image: 'https://images.unsplash.com/photo-1627308595171-d1b5d67129c4?w=400&auto=format', description: 'Soft milk dumplings soaked in rose-flavored sugar syrup' },
+        { name: 'Rasmalai', price: 150, image: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&auto=format', description: 'Cottage cheese patties in sweetened, thickened milk with saffron' },
+        { name: 'Kulfi Falooda', price: 140, image: 'https://images.unsplash.com/photo-1582716401301-b2407dc7563d?w=400&auto=format', description: 'Traditional Indian ice cream with vermicelli and rose syrup' },
+        { name: 'Gajar Halwa', price: 130, image: 'https://images.unsplash.com/photo-1642821373181-696a54913e93?w=400&auto=format', description: 'Warm carrot pudding with ghee, milk, and dry fruits' }
     ],
     drinks: [
         { name: 'Mango Lassi', price: 120, image: 'https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=400&auto=format', description: 'Creamy yogurt drink blended with fresh mango pulp' },
